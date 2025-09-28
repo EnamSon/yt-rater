@@ -1,0 +1,43 @@
+[project]
+name = "yt-rater"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "ENAMA ALPHONSE DÉSIRÉ JUNIOR",email = "junior.enama@facsciences-uy1.cm"}
+]
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "fastapi (>=0.117.1,<0.118.0)",
+    "uvicorn (>=0.37.0,<0.38.0)",
+    "typer (>=0.19.2,<0.20.0)",
+    "pydantic (>=2.11.9,<3.0.0)",
+    "google-genai (>=1.39.0,<2.0.0)",
+    "google-api-python-client (>=2.183.0,<3.0.0)",
+    "tomli-w (>=1.2.0,<2.0.0)",
+]
+
+[tool.poetry]
+name = "yt-rater"
+version = "0.1.0"
+packages = [{include = "yt_rater", from = "src"}]
+
+[tool.poetry.scripts]
+yt-rater = "yt_rater.cli:main"
+
+[tool.poetry.group.dev.dependencies]
+mypy = "^1.18.2"
+pytest = "^8.4.2"
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+
+[tool.mypy]
+warn_unused_ignores = true
+warn_unused_configs = true
+mypy_path = ["src", "tests"]
+files = ["src", "tests"]
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
