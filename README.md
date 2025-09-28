@@ -13,12 +13,17 @@ This score is returned to the extension and displayed directly on the video (sta
 
 ---
 
+## Work in Progress
+
+This repository contains work-in-progress code and is not production-ready.
+Use at your own risk, and expect frequent change.
+
 ## Features
 
 - Fetches comments from a YouTube video using the official API  
 - Analysis and scoring with Google Gemini (`google-genai`)  
 - Local cache (avoids re-evaluation of recent videos)  
-- Simple configuration stored in `~/.yt_rater/config.json`  
+- Simple configuration stored in `~/.yt_rater/config.toml`  
 - CLI (`yt-rater`) with two commands:  
   - `config` → create/show configuration  
   - `run` → start the local FastAPI server  
