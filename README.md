@@ -39,7 +39,6 @@ Use at your own risk, and expect frequent change.
 ```bash
 git clone https://github.com/EnamSon/yt-rater.git
 cd yt-rater
-poetry build
 poetry install
 ```
 
@@ -92,6 +91,7 @@ The tests use pytest and mock YouTube/Gemini calls, so they don’t consume real
 
 Projet structure:
 
+```
 yt-rater/
 │
 ├── pyproject.toml               # Managed by Poetry
@@ -122,7 +122,7 @@ yt-rater/
     ├── test_cache.py
     ├── test_server.py
     └── test_youtube.py
-
+```
 ---
 
 ## TODO
